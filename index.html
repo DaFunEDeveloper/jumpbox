@@ -78,7 +78,9 @@
 
 			if(currentClassName == 'box') {
 				document.getElementById('box').className = 'box jump';
-				jump();
+				setTimeout(function () {
+					jump();
+				}, 500);
 			} else {
 				document.getElementById('box').className = 'box';
 			}
