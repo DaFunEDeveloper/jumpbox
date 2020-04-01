@@ -40,6 +40,16 @@
 			left: 690px;
 		}
 
+		.box.jump{
+			display: block;
+			bottom: 150px;
+			width: 100px;
+			height: 100px;
+			left: 690px;
+			background-color: saddlebrown;
+			position: absolute;
+		}
+
 
 	</style>
 
@@ -47,12 +57,21 @@
 	<!--JS------------------------------------------------------------>
 	<script type="text/javascript">
 		
+		var jump = function () {
+			var currentClassName = document.getElementById('box').className;
+
+			if(currentClassName == 'box') {
+				document.getElementById('box').className = 'box jump';
+			} else {
+				document.getElementById('box').className = 'box';
+
 	</script>
 
-	<!--Divisions----------------------------------------------------->
-	<div class="sky"></div>
-	<div class="ground"></div>
-	<div class="box"></div>
+	<!--Divisions---------------------------------->
+	<div class="sky" id="sky"></div>
+	<div class="ground" id="ground"></div>
+	<div class="box" id="box"></div>
+	<a href="#" onclick="jump();">Jump</a>
 
 
 
